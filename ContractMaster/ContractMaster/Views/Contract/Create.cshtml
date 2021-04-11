@@ -1,0 +1,78 @@
+﻿@model ContractMaster.models.Contract
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Contract</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="ContractId" class="form-control" />
+            <div class="form-group">
+                <label asp-for="StartDate" class="control-label">Start Date</label>
+                <input asp-for="StartDate" class="form-control" />
+                <span asp-validation-for="StartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EndDate" class="control-label">End Date</label>
+                <input asp-for="EndDate" class="form-control" />
+                <span asp-validation-for="EndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractDetail.ContractName" class="control-label">Contract Name</label>
+                <input asp-for="ContractDetail.ContractName" class="form-control" />
+                <span asp-validation-for="ContractDetail.ContractName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractDetail.SubCategoryId" class="control-label">Category Name</label>
+                <select asp-for="ContractDetail.SubCategoryId" asp-items="ViewBag.SubcategoryId" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractDetail.ClientId" class="control-label">Client</label>
+                <select asp-for="ContractDetail.ClientId" asp-items="ViewBag.ClientId" class="form-control"></select>
+                <span asp-validation-for="ContractDetail.ClientId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractDetail.ContractorId" class="control-label">Contrator</label>
+                <select asp-for="ContractDetail.ContractorId" asp-items="ViewBag.ContractorId" class="form-control"></select>
+                <span asp-validation-for="ContractDetail.ContractorId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractDetail.BuyerId" class="control-label">Buyer</label>
+                <select asp-for="ContractDetail.BuyerId" asp-items="ViewBag.BuyerId" class="form-control"></select>
+                <span asp-validation-for="ContractDetail.BuyerId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractDetail.Description" class="control-label"></label>
+                <input asp-for="ContractDetail.Description" class="form-control" />
+                <span asp-validation-for="ContractDetail.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractDetail.BidDate" class="control-label">Bid Date</label>
+                <input asp-for="ContractDetail.BidDate" class="form-control" />
+                <span asp-validation-for="ContractDetail.BidDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContractDetail.BidNumber" class="control-label">Bid Number</label>
+                <input asp-for="ContractDetail.BidNumber" class="form-control" />
+                <span asp-validation-for="ContractDetail.BidNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

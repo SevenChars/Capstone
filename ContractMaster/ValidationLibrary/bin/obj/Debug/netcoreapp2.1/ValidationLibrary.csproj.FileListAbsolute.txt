@@ -1,0 +1,9 @@
+C:\Users\Yuudachi\Documents\WeChat Files\WillardSnow\Files\ContractMaster\ValidationLibrary\bin\Debug\netcoreapp2.1\ValidationLibrary.deps.json
+C:\Users\Yuudachi\Documents\WeChat Files\WillardSnow\Files\ContractMaster\ValidationLibrary\bin\Debug\netcoreapp2.1\ValidationLibrary.dll
+C:\Users\Yuudachi\Documents\WeChat Files\WillardSnow\Files\ContractMaster\ValidationLibrary\bin\Debug\netcoreapp2.1\ValidationLibrary.pdb
+C:\Users\Yuudachi\Documents\WeChat Files\WillardSnow\Files\ContractMaster\ValidationLibrary\obj\Debug\netcoreapp2.1\ValidationLibrary.csprojAssemblyReference.cache
+C:\Users\Yuudachi\Documents\WeChat Files\WillardSnow\Files\ContractMaster\ValidationLibrary\obj\Debug\netcoreapp2.1\ValidationLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Yuudachi\Documents\WeChat Files\WillardSnow\Files\ContractMaster\ValidationLibrary\obj\Debug\netcoreapp2.1\ValidationLibrary.AssemblyInfoInputs.cache
+C:\Users\Yuudachi\Documents\WeChat Files\WillardSnow\Files\ContractMaster\ValidationLibrary\obj\Debug\netcoreapp2.1\ValidationLibrary.AssemblyInfo.cs
+C:\Users\Yuudachi\Documents\WeChat Files\WillardSnow\Files\ContractMaster\ValidationLibrary\obj\Debug\netcoreapp2.1\ValidationLibrary.dll
+C:\Users\Yuudachi\Documents\WeChat Files\WillardSnow\Files\ContractMaster\ValidationLibrary\obj\Debug\netcoreapp2.1\ValidationLibrary.pdb

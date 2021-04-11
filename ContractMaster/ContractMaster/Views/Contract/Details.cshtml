@@ -1,0 +1,84 @@
+﻿@model ContractMaster.models.Contract
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Contract</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDetail.ContractName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetail.ContractName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AddDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AddDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDetail.Category.CategoryName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetail.Category.CategoryName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDetail.SubCategory.SubcategoryName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetail.SubCategory.SubcategoryName)
+        </dd>
+        <dt>
+            Client Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetail.Client.ClientNavigation.CompanyName)
+        </dd>
+        <dt>
+            Contractor Name
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetail.Contractor.ContractorNavigation.CompanyName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDetail.Description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetail.Description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDetail.BidDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetail.BidDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ContractDetail.BidNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ContractDetail.BidNumber)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.ContractId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

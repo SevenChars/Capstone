@@ -1,0 +1,105 @@
+﻿@model IEnumerable<ContractMaster.models.Contract>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-controller="contract" asp-action="search">Back to Search</a>
+</p>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<form>
+    <button>
+        @Html.ActionLink("Export to CSV File", "ExportToCsv")
+    </button>
+</form>
+
+
+
+<form method="post" enctype="multipart/form-data" asp-controller="Contract" asp-action="Upload">
+    <div class="form-group">
+        <div>
+            <p>Upload this file:</p>
+            <input type="file" name="uploadedFile" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div>
+            <p>to this filename on server (default original filename)</p>
+            <input type="text" name="targetFileName" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div>
+            <input type="submit" value="Upload" />
+        </div>
+    </div>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Contract Number
+            </th>
+            <th>
+                Company Name
+            </th>
+            <th>
+                Start Date
+            </th>
+            <th>
+                End Date
+            </th>
+            <th>
+                Add Date
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="4" class="text-danger">
+                    No Any Record Matched
+                </td>
+            </tr>
+        }
+        else
+        {
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ContractDetail.ContractName)
+                    </td>
+                    <td>
+                        <a asp-controller="Company" asp-action="index" asp-route-companyId="@item.ContractDetail.Client.ClientId">
+                            @Html.DisplayFor(modelItem => item.ContractDetail.Client.ClientNavigation.CompanyName)
+                        </a>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.EndDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.AddDate)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.ContractId">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.ContractId">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.ContractId">Delete</a>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
